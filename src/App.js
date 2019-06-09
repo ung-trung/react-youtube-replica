@@ -8,6 +8,8 @@ export class App extends Component {
   state = { videos: [], selectedVideo: null };
 
   onTermSubmit = async term => {
+    console.log(term);
+
     const res = await youtube.get('/search', {
       params: {
         q: { term }
